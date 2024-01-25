@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleCycleColours}>cycle colours</button>
+      <div onClick={handleCycleColours}>cycle colours</div>
     </div>
   );
 }
