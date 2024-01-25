@@ -12,6 +12,7 @@ function App() {
 
     // handleStorageChange function
     const handleStorageChange = () => {
+      console.log("sessionStorage has changed")
       setColours(sessionStorage.coloursTable);
     };
 
