@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     console.log(sessionStorage);
-    setColours(JSON.parse(sessionStorage.coloursTable));
+    setColours(sessionStorage.coloursTable);
 
     // handleStorageChange function
     const handleStorageChange = () => {
