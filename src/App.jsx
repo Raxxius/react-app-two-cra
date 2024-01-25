@@ -28,6 +28,7 @@ function App() {
 
   const handleCycleColours = () => {
     // Increment colourIndex
+    console.log(JSON.parse(colours))
     const newColourIndex = (colourIndex + 1) % colours.length;
     console.log(colours[newColourIndex])
     setColourIndex(newColourIndex);
