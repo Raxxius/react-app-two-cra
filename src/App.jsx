@@ -29,11 +29,11 @@ function App() {
   const handleCycleColours = () => {
     // Increment colourIndex
     const newColourIndex = (colourIndex + 1) % colours.length;
-    console.log(colours[newColourIndex])
     setColourIndex(newColourIndex);
 
     // Update currentColour in sessionStorage
     sessionStorage.setItem("currentColour", colours[newColourIndex]);
+    window.dispatchEvent(new Event('storage'));
   };
 
   return (
