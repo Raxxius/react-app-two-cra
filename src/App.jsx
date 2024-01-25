@@ -13,7 +13,7 @@ function App() {
     // handleStorageChange function
     const handleStorageChange = () => {
       console.log("sessionStorage has changed")
-      setColours(sessionStorage.coloursTable);
+      setColours(JSON.parse(sessionStorage.coloursTable));
     };
 
     // Event listener
@@ -28,7 +28,6 @@ function App() {
 
   const handleCycleColours = () => {
     // Increment colourIndex
-    console.log(JSON.parse(colours))
     const newColourIndex = (colourIndex + 1) % colours.length;
     console.log(colours[newColourIndex])
     setColourIndex(newColourIndex);
