@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     console.log(sessionStorage);
-    setColours(sessionStorage.coloursTable);
+    setColours(JSON.parse(sessionStorage.coloursTable));
 
     // handleStorageChange function
     const handleStorageChange = () => {
@@ -29,7 +29,7 @@ function App() {
   const handleCycleColours = () => {
     // Increment colourIndex
     const newColourIndex = (colourIndex + 1) % colours.length;
-    console.log(newColourIndex)
+    console.log(colours[newColourIndex])
     setColourIndex(newColourIndex);
 
     // Update currentColour in sessionStorage
