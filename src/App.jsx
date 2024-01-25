@@ -26,9 +26,18 @@ function App() {
     };
   }, []);
 
+  const handleCycleColours = () => {
+    // Increment colourIndex
+    const newColourIndex = (colourIndex + 1) % colours.length;
+    setColourIndex(newColourIndex);
+
+    // Update currentColour in sessionStorage
+    sessionStorage.setItem("currentColour", colours[newColourIndex]);
+  };
+
   return (
     <div className="App">
-      <button>cycle colours</button>
+      <button onClick={handleCycleColours}>cycle colours</button>
     </div>
   );
 }
